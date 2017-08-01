@@ -126,7 +126,7 @@ $(window).on('load', function() {
 
       if (point.Latitude !== '' && point.Longitude !== '') {
         var marker = L.marker([point.Latitude, point.Longitude], {icon: icon})
-         .bindPopup("<b><span style='font-size:15px'><a href='https://smartharare.org/view-reports'>" + point['ID Report Title'] + '</a></span></b><br>' + point['Report Date'] + point['Council Response']
+         .bindPopup("<b><span style='font-size:15px'><a href='https://smartharare.org/view-reports'>" + point['ID Report Title'] + '</a></span></b><br>' + 'Date:' + point['Report Date'] + point['Council Response']
           + point['Response Date'] + '<br>' + (point['Image'] ? ('<img src="' + point['Image'] + '"><br>') : ''));
 
         if (layers !== undefined && layers.length !== 1) {
