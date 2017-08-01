@@ -126,8 +126,9 @@ $(window).on('load', function() {
 
       if (point.Latitude !== '' && point.Longitude !== '') {
         var marker = L.marker([point.Latitude, point.Longitude], {icon: icon})
-         .bindPopup("<b><span style='font-size:15px'><a href='https://smartharare.org/view-reports'>" + point['ID Report Title'] + '</a></span></b><br>' + 'Date:' + point['Report Date'] + point['Council Response']
-          + point['Response Date'] + '<br>' + (point['Image'] ? ('<img src="' + point['Image'] + '"><br>') : ''));
+         .bindPopup("<b><span style='font-size:15px'><a href='https://smartharare.org/view-reports'>" + point['ID Report Title'] + '</a></span></b><br>'
+          + '<b>Date:</b>' + point['Report Date'] + '<br>' + '<b>Council Response:</b>' point['Council Response'] + '<br>'
+          + '<b>Response Date:</b>' + point['Response Date'] + '<br>' + (point['Image'] ? ('<img src="' + point['Image'] + '"><br>') : ''));
 
         if (layers !== undefined && layers.length !== 1) {
           marker.addTo(layers[point.Group]);
